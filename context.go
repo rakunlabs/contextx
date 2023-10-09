@@ -8,13 +8,13 @@ type ctxInternalKey string
 
 const ctxInternal ctxInternalKey = "internal"
 
-var unUsedValue = newInternalValue()
+var unUsedValue = newData()
 
 // Value gets value from context's map.
 //
 // Returns same as map's value and ok.
 func Value[T any](ctx context.Context, key any) (T, bool) { //nolint:ireturn // ignore
-	var o *InternalValue
+	var o *Data
 	if ctx == nil {
 		o = unUsedValue
 	} else {
@@ -62,18 +62,18 @@ func Init(ctx context.Context) context.Context {
 		ctx = context.Background()
 	}
 
-	return context.WithValue(ctx, ctxInternal, newInternalValue())
+	return context.WithValue(ctx, ctxInternal, newData())
 }
 
-// Internal gets internal value from context.
+// Internal gets internal data value from context.
 //
 // If context is nil return nil and false.
-func Internal(ctx context.Context) (*InternalValue, bool) {
+func Internal(ctx context.Context) (*Data, bool) {
 	if ctx == nil {
 		return nil, false
 	}
 
-	v, ok := ctx.Value(ctxInternal).(*InternalValue)
+	v, ok := ctx.Value(ctxInternal).(*Data)
 
 	return v, ok
 }

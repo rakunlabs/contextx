@@ -2,14 +2,14 @@ package contextx
 
 import "sync"
 
-type InternalValue struct {
+type Data struct {
 	V map[any]interface{}
 
 	M sync.RWMutex
 }
 
-func newInternalValue() *InternalValue {
-	return &InternalValue{
+func newData() *Data {
+	return &Data{
 		V: make(map[any]interface{}),
 	}
 }
