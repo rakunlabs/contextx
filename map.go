@@ -2,14 +2,14 @@ package contextx
 
 import "sync"
 
-type ContextValue struct {
+type InternalValue struct {
 	V map[any]interface{}
 
 	M sync.RWMutex
 }
 
-func newContextValue() *ContextValue {
-	return &ContextValue{
+func newInternalValue() *InternalValue {
+	return &InternalValue{
 		V: make(map[any]interface{}),
 	}
 }
