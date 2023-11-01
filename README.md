@@ -10,7 +10,7 @@ Context value helper library.
 Differences between context package this holds value in a map with mutex lock.
 
 ```sh
-go get github.com/worldline-go/utility/contextx
+go get github.com/worldline-go/contextx
 ```
 
 ## Usage
