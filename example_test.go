@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/worldline-go/contextx"
+	"github.com/rakunlabs/contextx"
 )
 
 func Example() {

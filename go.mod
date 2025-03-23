@@ -1,3 +1,3 @@
-module github.com/worldline-go/contextx
+module github.com/rakunlabs/contextx
 
 go 1.19
