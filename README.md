@@ -24,3 +24,5 @@ if v, ok := contextx.Value[string](ctx, "secret"); ok {
     // v is string
 }
 ```
+
+Use `WithKey` option to set multiple data holder on same context.
